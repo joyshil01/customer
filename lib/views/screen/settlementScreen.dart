@@ -182,8 +182,8 @@ class _SettlementScreenState extends State<SettlementScreen> {
                       height: height > 750
                           ? 61.h
                           : height < 650
-                              ? 82.h
-                              : 78.2.h,
+                              ? 55.h
+                              : 52.5.h,
                       child: ListView.builder(
                         itemCount: 18,
                         itemBuilder: (context, index) => Container(

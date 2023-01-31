@@ -20,8 +20,8 @@ class _Confirmed_WidgetState extends State<Confirmed_Widget> {
       height: height > 750
           ? 76.9.h
           : height < 650
-              ? 103.h
-              : 78.3.h,
+              ? 75.h
+              : 72.h,
       width: double.infinity,
       child: ListView.builder(
         itemCount: 20,

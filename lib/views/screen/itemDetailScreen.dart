@@ -46,8 +46,8 @@ class _ItemDetailScreenState extends State<ItemDetailScreen> {
                 height: height > 750
                     ? 89.7.h
                     : height < 650
-                        ? 103.h
-                        : 78.3.h,
+                        ? 92.h
+                        : 88.h,
               ),
             ),
           ],

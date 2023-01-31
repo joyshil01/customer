@@ -279,8 +279,8 @@ class _ItemScreenState extends State<ItemScreen> {
                 height: height > 750
                     ? 76.9.h
                     : height < 650
-                        ? 103.h
-                        : 78.3.h,
+                        ? 75.h
+                        : 73.2.h,
                 child: Column(
                   children: [
                     _selection == 0
