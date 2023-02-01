@@ -1,12 +1,10 @@
 import 'dart:io';
-
 import 'package:cool_alert/cool_alert.dart';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:image_picker/image_picker.dart';
-
 import '../../res/mediaQuery.dart';
 
 class UploadAccountStatement_Screen extends StatefulWidget {
@@ -226,12 +224,12 @@ class _UploadAccountStatement_ScreenState
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Icon(
+                          const Icon(
                             Iconsax.folder_open,
                             color: Colors.blue,
                             size: 40,
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 15,
                           ),
                           Text(
@@ -257,75 +255,98 @@ class _UploadAccountStatement_ScreenState
                           height: 10,
                         ),
                         Container(
-                            padding: EdgeInsets.all(8),
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                color: Colors.white,
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: Colors.grey.shade200,
-                                    offset: Offset(0, 1),
-                                    blurRadius: 3,
-                                    spreadRadius: 2,
-                                  )
-                                ]),
-                            child: Row(
-                              children: [
-                                ClipRRect(
-                                    borderRadius: BorderRadius.circular(8),
-                                    child: Image.file(
-                                      _file!,
-                                      width: 70,
-                                    )),
-                                SizedBox(
-                                  width: 10,
+                          padding: EdgeInsets.all(8),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: Colors.white,
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.grey.shade200,
+                                offset: Offset(0, 1),
+                                blurRadius: 3,
+                                spreadRadius: 2,
+                              )
+                            ],
+                          ),
+                          child: Row(
+                            children: [
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(8),
+                                child: Image.file(
+                                  _file!,
+                                  width: 70,
                                 ),
-                                Expanded(
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        _platformFile!.name,
-                                        style: TextStyle(
-                                            fontSize: 13, color: Colors.black),
+                              ),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Expanded(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      _platformFile!.name,
+                                      style: TextStyle(
+                                          fontSize: 13, color: Colors.black),
+                                    ),
+                                    SizedBox(
+                                      height: 5,
+                                    ),
+                                    Text(
+                                      '${(_platformFile!.size / 1024).ceil()} KB',
+                                      style: TextStyle(
+                                          fontSize: 13,
+                                          color: Colors.grey.shade500),
+                                    ),
+                                    SizedBox(
+                                      height: 5,
+                                    ),
+                                    Container(
+                                      height: 5,
+                                      clipBehavior: Clip.hardEdge,
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(5),
+                                        color: Colors.blue.shade50,
                                       ),
-                                      SizedBox(
-                                        height: 5,
+                                      child: LinearProgressIndicator(
+                                        value: loadingController.value,
                                       ),
-                                      Text(
-                                        '${(_platformFile!.size / 1024).ceil()} KB',
-                                        style: TextStyle(
-                                            fontSize: 13,
-                                            color: Colors.grey.shade500),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  Padding(
+                                    padding: EdgeInsets.only(
+                                        bottom:
+                                            SizeVariables.getHeight(context) *
+                                                0.12),
+                                    child: InkWell(
+                                      onTap: () {},
+                                      child: Container(
+                                        child: Icon(
+                                          Icons.delete,
+                                          color: Theme.of(context)
+                                              .colorScheme
+                                              .secondary,
+                                          size: 22,
+                                        ),
                                       ),
-                                      SizedBox(
-                                        height: 5,
-                                      ),
-                                      Container(
-                                          height: 5,
-                                          clipBehavior: Clip.hardEdge,
-                                          decoration: BoxDecoration(
-                                            borderRadius:
-                                                BorderRadius.circular(5),
-                                            color: Colors.blue.shade50,
-                                          ),
-                                          child: LinearProgressIndicator(
-                                            value: loadingController.value,
-                                          )),
-                                    ],
+                                    ),
                                   ),
-                                ),
-                                SizedBox(
-                                  width: 10,
-                                ),
-                              ],
-                            )),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
                         SizedBox(
                           height: 20,
                         ),
                       ],
-                    ))
+                    ),
+                  )
                 : Container(),
             SizedBox(
               height: 150,

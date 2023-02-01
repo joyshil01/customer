@@ -252,75 +252,96 @@ class _UploadInvoice_ScreenState extends State<UploadInvoice_Screen>
                           height: 10,
                         ),
                         Container(
-                            padding: EdgeInsets.all(8),
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                color: Colors.white,
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: Colors.grey.shade200,
-                                    offset: Offset(0, 1),
-                                    blurRadius: 3,
-                                    spreadRadius: 2,
-                                  )
-                                ]),
-                            child: Row(
-                              children: [
-                                ClipRRect(
-                                    borderRadius: BorderRadius.circular(8),
-                                    child: Image.file(
-                                      _file!,
-                                      width: 70,
-                                    )),
-                                SizedBox(
-                                  width: 10,
+                          padding: EdgeInsets.all(8),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: Colors.white,
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.grey.shade200,
+                                  offset: Offset(0, 1),
+                                  blurRadius: 3,
+                                  spreadRadius: 2,
+                                )
+                              ]),
+                          child: Row(
+                            children: [
+                              ClipRRect(
+                                  borderRadius: BorderRadius.circular(8),
+                                  child: Image.file(
+                                    _file!,
+                                    width: 70,
+                                  )),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Expanded(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      _platformFile!.name,
+                                      style: TextStyle(
+                                          fontSize: 13, color: Colors.black),
+                                    ),
+                                    SizedBox(
+                                      height: 5,
+                                    ),
+                                    Text(
+                                      '${(_platformFile!.size / 1024).ceil()} KB',
+                                      style: TextStyle(
+                                          fontSize: 13,
+                                          color: Colors.grey.shade500),
+                                    ),
+                                    SizedBox(
+                                      height: 5,
+                                    ),
+                                    Container(
+                                      height: 5,
+                                      clipBehavior: Clip.hardEdge,
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(5),
+                                        color: Colors.blue.shade50,
+                                      ),
+                                      child: LinearProgressIndicator(
+                                        value: loadingController.value,
+                                      ),
+                                    ),
+                                  ],
                                 ),
-                                Expanded(
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        _platformFile!.name,
-                                        style: TextStyle(
-                                            fontSize: 13, color: Colors.black),
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  Padding(
+                                    padding: EdgeInsets.only(
+                                        bottom:
+                                            SizeVariables.getHeight(context) *
+                                                0.12),
+                                    child: InkWell(
+                                      onTap: () {},
+                                      child: Container(
+                                        child: Icon(
+                                          Icons.delete,
+                                          color: Theme.of(context)
+                                              .colorScheme
+                                              .secondary,
+                                          size: 22,
+                                        ),
                                       ),
-                                      SizedBox(
-                                        height: 5,
-                                      ),
-                                      Text(
-                                        '${(_platformFile!.size / 1024).ceil()} KB',
-                                        style: TextStyle(
-                                            fontSize: 13,
-                                            color: Colors.grey.shade500),
-                                      ),
-                                      SizedBox(
-                                        height: 5,
-                                      ),
-                                      Container(
-                                          height: 5,
-                                          clipBehavior: Clip.hardEdge,
-                                          decoration: BoxDecoration(
-                                            borderRadius:
-                                                BorderRadius.circular(5),
-                                            color: Colors.blue.shade50,
-                                          ),
-                                          child: LinearProgressIndicator(
-                                            value: loadingController.value,
-                                          )),
-                                    ],
+                                    ),
                                   ),
-                                ),
-                                SizedBox(
-                                  width: 10,
-                                ),
-                              ],
-                            )),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
                         SizedBox(
                           height: 20,
                         ),
                       ],
-                    ))
+                    ),
+                  )
                 : Container(),
             SizedBox(
               height: 150,

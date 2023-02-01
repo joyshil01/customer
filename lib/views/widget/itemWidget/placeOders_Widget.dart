@@ -5,8 +5,6 @@ import 'package:sizer/sizer.dart';
 import '../../../res/mediaQuery.dart';
 
 class PlaceOder_Widget extends StatefulWidget {
-  // const PlaceOder_Widget({Key? key}) : super(key: key);
-
   @override
   State<PlaceOder_Widget> createState() => _PlaceOder_WidgetState();
 }
@@ -289,7 +287,7 @@ class _PlaceOder_WidgetState extends State<PlaceOder_Widget> {
                       ),
                     ),
                     SizedBox(
-                      height: SizeVariables.getHeight(context)*0.008,
+                      height: SizeVariables.getHeight(context) * 0.008,
                     ),
                     Container(
                       child: Text(
@@ -305,7 +303,7 @@ class _PlaceOder_WidgetState extends State<PlaceOder_Widget> {
                       ),
                     ),
                     SizedBox(
-                      height: SizeVariables.getHeight(context)*0.008,
+                      height: SizeVariables.getHeight(context) * 0.008,
                     ),
                     Container(
                       child: Text(
@@ -321,7 +319,7 @@ class _PlaceOder_WidgetState extends State<PlaceOder_Widget> {
                       ),
                     ),
                     SizedBox(
-                      height: SizeVariables.getHeight(context)*0.008,
+                      height: SizeVariables.getHeight(context) * 0.008,
                     ),
                     Container(
                       child: Text(
@@ -337,7 +335,7 @@ class _PlaceOder_WidgetState extends State<PlaceOder_Widget> {
                       ),
                     ),
                     SizedBox(
-                      height: SizeVariables.getHeight(context)*0.008,
+                      height: SizeVariables.getHeight(context) * 0.008,
                     ),
                     Container(
                       child: Text(
@@ -353,7 +351,7 @@ class _PlaceOder_WidgetState extends State<PlaceOder_Widget> {
                       ),
                     ),
                     SizedBox(
-                      height: SizeVariables.getHeight(context)*0.008,
+                      height: SizeVariables.getHeight(context) * 0.008,
                     ),
                     Container(
                       child: Text(

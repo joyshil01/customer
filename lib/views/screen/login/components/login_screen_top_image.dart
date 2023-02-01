@@ -4,7 +4,6 @@ import 'package:lottie/lottie.dart';
 
 import '../../../../res/mediaQuery.dart';
 
-
 class LoginScreenTopImage extends StatelessWidget {
   const LoginScreenTopImage({
     Key? key,
@@ -14,38 +13,6 @@ class LoginScreenTopImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Container(
-          padding: EdgeInsets.only(
-            top: SizeVariables.getHeight(context) * 0.07,
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Container(
-                child: FittedBox(
-                  fit: BoxFit.contain,
-                  child: Text(
-                    'Reshaping the future',
-                    style: Theme.of(context).textTheme.bodyText2!.copyWith(
-                          fontSize: 30,
-                        ),
-                  ),
-                ),
-              ),
-              Container(
-                child: FittedBox(
-                  fit: BoxFit.contain,
-                  child: Text(
-                    'of finance.',
-                    style: Theme.of(context).textTheme.bodyText2!.copyWith(
-                          fontSize: 30,
-                        ),
-                  ),
-                ),
-              ),
-            ],
-          ),
-        ),
         Container(
           child: Lottie.asset('assets/json/VitwoAI Login.json',
               fit: BoxFit.cover,
