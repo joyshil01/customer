@@ -267,6 +267,112 @@ class _PlaceOder_WidgetState extends State<PlaceOder_Widget> {
               ),
             ),
           ),
+          Padding(
+            padding: const EdgeInsets.all(16),
+            child: ContainerStyleInvoice(
+              child: Container(
+                padding: EdgeInsets.all(8),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      child: Text(
+                        'SO Date:',
+                        style: Theme.of(context).textTheme.bodyText2,
+                      ),
+                    ),
+                    Container(
+                      padding: EdgeInsets.all(5),
+                      child: Text(
+                        '01-02-2023',
+                        style: Theme.of(context).textTheme.bodyText1,
+                      ),
+                    ),
+                    SizedBox(
+                      height: SizeVariables.getHeight(context)*0.008,
+                    ),
+                    Container(
+                      child: Text(
+                        'Delivery Date:',
+                        style: Theme.of(context).textTheme.bodyText2,
+                      ),
+                    ),
+                    Container(
+                      padding: EdgeInsets.all(5),
+                      child: Text(
+                        '01-02-2023',
+                        style: Theme.of(context).textTheme.bodyText1,
+                      ),
+                    ),
+                    SizedBox(
+                      height: SizeVariables.getHeight(context)*0.008,
+                    ),
+                    Container(
+                      child: Text(
+                        'Profit Center:',
+                        style: Theme.of(context).textTheme.bodyText2,
+                      ),
+                    ),
+                    Container(
+                      padding: EdgeInsets.all(5),
+                      child: Text(
+                        'func 3',
+                        style: Theme.of(context).textTheme.bodyText1,
+                      ),
+                    ),
+                    SizedBox(
+                      height: SizeVariables.getHeight(context)*0.008,
+                    ),
+                    Container(
+                      child: Text(
+                        'PO Number:',
+                        style: Theme.of(context).textTheme.bodyText2,
+                      ),
+                    ),
+                    Container(
+                      padding: EdgeInsets.all(5),
+                      child: Text(
+                        'PO7436373',
+                        style: Theme.of(context).textTheme.bodyText1,
+                      ),
+                    ),
+                    SizedBox(
+                      height: SizeVariables.getHeight(context)*0.008,
+                    ),
+                    Container(
+                      child: Text(
+                        'Credit Period(Days)',
+                        style: Theme.of(context).textTheme.bodyText2,
+                      ),
+                    ),
+                    Container(
+                      padding: EdgeInsets.all(5),
+                      child: Text(
+                        '20',
+                        style: Theme.of(context).textTheme.bodyText1,
+                      ),
+                    ),
+                    SizedBox(
+                      height: SizeVariables.getHeight(context)*0.008,
+                    ),
+                    Container(
+                      child: Text(
+                        'Select Sales Person',
+                        style: Theme.of(context).textTheme.bodyText2,
+                      ),
+                    ),
+                    Container(
+                      padding: EdgeInsets.all(5),
+                      child: Text(
+                        'KAM1',
+                        style: Theme.of(context).textTheme.bodyText1,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
         ],
       ),
     );
