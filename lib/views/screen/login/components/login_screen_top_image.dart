@@ -14,9 +14,11 @@ class LoginScreenTopImage extends StatelessWidget {
     return Column(
       children: [
         Container(
-          child: Lottie.asset('assets/json/VitwoAI Login.json',
-              fit: BoxFit.cover,
-              height: SizeVariables.getHeight(context) * 0.4),
+          child: Lottie.asset(
+            'assets/json/VitwoAI Login.json',
+            fit: BoxFit.cover,
+            height: SizeVariables.getHeight(context) * 0.4,
+          ),
         ),
       ],
     );

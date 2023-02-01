@@ -1,10 +1,5 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:sizer/sizer.dart';
-import 'package:toggle_switch/toggle_switch.dart';
-
 import '../../res/components/date_range_picker.dart';
 import '../../res/mediaQuery.dart';
 import '../../routes/routeName.dart';
@@ -166,46 +161,6 @@ class _InvoiceScreenState extends State<InvoiceScreen> {
                         ),
                       ],
                     ),
-
-                    // Container(
-                    //   width: 400,
-                    //   // color: Colors.amber,
-                    //   margin: EdgeInsets.only(
-                    //     top: SizeVariables.getHeight(context) * 0.02,
-                    //   ),
-                    //   child: ToggleSwitch(
-                    //     // changeOnTap: true,
-                    //     minWidth: 400,
-                    //     customWidths: [190, 190],
-                    //     // dividerColor: Colors.amber,
-                    //     // cornerRadius: 10,
-                    //     curve: Curves.easeInBack,
-                    //     activeBgColor: [
-                    //       // _selection == 0
-                    //       //     ? Theme.of(context).scaffoldBackgroundColor
-                    //       //     : _selection == 1
-                    //       //         ? Theme.of(context).scaffoldBackgroundColor
-                    //       //         :
-                    //       Theme.of(context).scaffoldBackgroundColor,
-                    //     ],
-                    //     activeFgColor: Colors.black,
-                    //     inactiveBgColor:
-                    //         Theme.of(context).colorScheme.secondary,
-                    //     inactiveFgColor: Colors.white,
-                    //     totalSwitches: 2,
-                    //     labels: ['Invoice', 'CR & DR'],
-                    //     onToggle: (index) {
-                    //       _selection == 0;
-                    //       // setState(
-                    //       //   () {
-                    //       //     // _selection = index!;
-                    //       //   },
-                    //       // );
-                    //       print('switched to: $index');
-                    //     },
-                    //   ),
-                    // ),
-
                     SizedBox(
                       height: SizeVariables.getHeight(context) * 0.01,
                     ),
