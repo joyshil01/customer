@@ -350,60 +350,71 @@ class _InvoiceScreenState extends State<InvoiceScreen> {
         mobile: ListView.builder(
           // physics: const NeverScrollableScrollPhysics(),
           itemCount: 15,
-          itemBuilder: (context, index) => InkWell(
-            onTap: () {
-              Navigator.pushNamed(context, RouteNames.invoice_details);
-            },
-            child: Padding(
-              padding: EdgeInsets.only(
-                top: SizeVariables.getHeight(context) * 0.008,
-                left: SizeVariables.getWidth(context) * 0.025,
-                right: SizeVariables.getWidth(context) * 0.025,
-                bottom: SizeVariables.getHeight(context) * 0.01,
-              ),
-              child: ContainerStyleInvoice(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Container(
-                      // color: Colors.red,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          CircleAvatar(
-                            radius: SizeVariables.getWidth(context) * 0.06,
-                            backgroundColor: Colors.green,
-                            backgroundImage:
-                                const AssetImage('assets/img/profilePic.jpg'),
-                            // child: const Icon(Icons.account_box, color: Colors.white),
-                          ),
-                          Container(
-                            padding: EdgeInsets.only(
-                              left: SizeVariables.getWidth(context) * 0.01,
-                            ),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Container(
-                                  width: SizeVariables.getWidth(context) * 0.5,
-                                  // color: Colors.amber,
-                                  child: Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceAround,
-                                    children: [
-                                      Container(
-                                        // width: SizeVariables.getWidth(context)*0.15,
+          itemBuilder: (context, index) => Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: InkWell(
+              onTap: () {
+                Navigator.pushNamed(context, RouteNames.invoice_details);
+              },
+              child: Padding(
+                padding: EdgeInsets.only(
+                  top: SizeVariables.getHeight(context) * 0.007,
+                  bottom: SizeVariables.getHeight(context) * 0.008,
+                ),
+                child: ContainerStyleInvoice(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        // color: Colors.red,
+                        child: Container(
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            // crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Container(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.all(5.0),
+                                      child: Container(
                                         child: FittedBox(
                                           fit: BoxFit.contain,
                                           child: Text(
                                             'INV00000005',
                                             style: Theme.of(context)
                                                 .textTheme
+                                                .bodyText1!
+                                                .copyWith(fontSize: 16),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(5.0),
+                                      child: Container(
+                                        child: FittedBox(
+                                          fit: BoxFit.contain,
+                                          child: Text(
+                                            '[1 item/s]',
+                                            style: Theme.of(context)
+                                                .textTheme
                                                 .bodyText1,
                                           ),
                                         ),
                                       ),
-                                      Container(
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Container(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.all(5.0),
+                                      child: Container(
                                         // width: SizeVariables.getWidth(context)*0.15,
                                         child: FittedBox(
                                           fit: BoxFit.contain,
@@ -415,32 +426,10 @@ class _InvoiceScreenState extends State<InvoiceScreen> {
                                           ),
                                         ),
                                       ),
-                                    ],
-                                  ),
-                                ),
-                                SizedBox(
-                                  height:
-                                      SizeVariables.getHeight(context) * 0.01,
-                                ),
-                                Container(
-                                  width: SizeVariables.getWidth(context) * 0.5,
-                                  child: Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceAround,
-                                    children: [
-                                      Container(
-                                        // width: SizeVariables.getWidth(context)*0.15,
-                                        child: FittedBox(
-                                          fit: BoxFit.contain,
-                                          child: Text(
-                                            '[1 item/s]',
-                                            style: Theme.of(context)
-                                                .textTheme
-                                                .bodyText1,
-                                          ),
-                                        ),
-                                      ),
-                                      Container(
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(5.0),
+                                      child: Container(
                                         width: SizeVariables.getWidth(context) *
                                             0.18,
                                         child: FittedBox(
@@ -453,95 +442,87 @@ class _InvoiceScreenState extends State<InvoiceScreen> {
                                           ),
                                         ),
                                       ),
-                                    ],
-                                  ),
+                                    ),
+                                  ],
                                 ),
-                              ],
-                            ),
-                          ),
-                          Container(
-                            padding: EdgeInsets.only(
-                              left: SizeVariables.getWidth(context) * 0.03,
-                            ),
-                            child: FittedBox(
-                              fit: BoxFit.cover,
-                              child: Text(
-                                '\₹123617',
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .bodyText1!
-                                    .copyWith(fontSize: 16),
                               ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    // SizedBox(
-                    //   height: SizeVariables.getHeight(context)*0.01,
-                    // ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Container(
-                          width: 100,
-                          padding: EdgeInsets.only(
-                              // left: SizeVariables.getWidth(context) * 0.03,
-                              top: SizeVariables.getHeight(context) * 0.013),
-                          child: Text(
-                            'Flipkart India Pvt Ltd. ',
-                            style: Theme.of(context)
-                                .textTheme
-                                .bodyText1!
-                                .copyWith(fontSize: 16),
-                            overflow: TextOverflow.ellipsis,
-                          ),
-                        ),
-                        Container(
-                          child: Column(
-                            children: [
                               Container(
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
-                                  color: Color.fromARGB(255, 174, 194, 185),
-                                ),
-                                child: Padding(
-                                  padding: const EdgeInsets.only(
-                                    left: 7.0,
-                                    right: 7.0,
-                                    top: 2.8,
-                                    bottom: 2.8,
-                                  ),
-                                  child: Center(
-                                    child: FittedBox(
-                                      fit: BoxFit.contain,
-                                      child: Text(
-                                        'Paid',
-                                        style: Theme.of(context)
-                                            .textTheme
-                                            .bodyText1!
-                                            .copyWith(
-                                              color: Color.fromARGB(
-                                                  255, 63, 147, 84),
-                                              fontSize: 12,
-                                            ),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.end,
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.all(3.0),
+                                      child: Container(
+                                        child: FittedBox(
+                                          fit: BoxFit.cover,
+                                          child: Text(
+                                            '\₹123617',
+                                            style: Theme.of(context)
+                                                .textTheme
+                                                .bodyText1!
+                                                .copyWith(fontSize: 16),
+                                          ),
+                                        ),
                                       ),
                                     ),
-                                  ),
-                                ),
-                              ),
-                              Container(
-                                child: Text(
-                                  '5 jan 2023',
-                                  style: Theme.of(context).textTheme.bodyText1,
+                                    Padding(
+                                      padding: const EdgeInsets.all(2.0),
+                                      child: Container(
+                                        child: Column(
+                                          children: [
+                                            Container(
+                                              decoration: BoxDecoration(
+                                                borderRadius:
+                                                    BorderRadius.circular(10),
+                                                color: Color.fromARGB(
+                                                    255, 174, 194, 185),
+                                              ),
+                                              child: Padding(
+                                                padding: const EdgeInsets.only(
+                                                  left: 7.0,
+                                                  right: 7.0,
+                                                  top: 2.8,
+                                                  bottom: 2.8,
+                                                ),
+                                                child: Center(
+                                                  child: FittedBox(
+                                                    fit: BoxFit.contain,
+                                                    child: Text(
+                                                      'Open Invoice',
+                                                      style: Theme.of(context)
+                                                          .textTheme
+                                                          .bodyText1!
+                                                          .copyWith(
+                                                            color: Color.fromARGB(
+                                                                255, 63, 147, 84),
+                                                            fontSize: 12,
+                                                          ),
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                            ),
+                                            Container(
+                                              child: Text(
+                                                '5 jan 2023',
+                                                style: Theme.of(context)
+                                                    .textTheme
+                                                    .bodyText1,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                  ],
                                 ),
                               ),
                             ],
                           ),
                         ),
-                      ],
-                    ),
-                  ],
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),

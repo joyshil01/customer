@@ -4,6 +4,7 @@ import '../../res/mediaQuery.dart';
 import '../widget/dashboardWidget/barChart/bar_Chart.dart';
 import '../widget/dashboardWidget/headerWidget.dart';
 import '../widget/dashboardWidget/lastInvoice/lastInvoicesWidget.dart';
+import '../widget/dashboardWidget/lastItem.dart';
 import '../widget/dashboardWidget/receivable_vs_Receive/receivableWidget.dart';
 
 class DashBoard extends StatefulWidget {
@@ -34,6 +35,10 @@ class _DashBoardState extends State<DashBoard> {
               height: SizeVariables.getHeight(context) * 0.02,
             ),
             LastInvoicesWidget(),
+            SizedBox(
+              height: SizeVariables.getHeight(context) * 0.02,
+            ),
+            LastItem(),
             SizedBox(
               height: SizeVariables.getHeight(context) * 0.02,
             ),

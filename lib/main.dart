@@ -3,7 +3,6 @@ import 'package:customer/routes/routeName.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
-
 void main() {
   runApp(MyApp());
 }
@@ -36,7 +35,6 @@ class MyApp extends StatelessWidget {
             colorScheme: ColorScheme.fromSwatch().copyWith(
               background: Colors.white,
               secondary: Color(0xfff003060),
-              
             ),
             unselectedWidgetColor: Color.fromARGB(255, 16, 68, 121),
             textTheme: const TextTheme(

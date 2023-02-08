@@ -10,4 +10,5 @@ class RouteNames {
   static const String miscellaneous = 'miscellaneous-screen';
   static const String item_details = 'item-details';
   static const String settlement_details = 'settlement-details';
+  static const String profile = 'profile-screen';
 }

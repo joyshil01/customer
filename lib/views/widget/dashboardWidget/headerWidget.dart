@@ -1,3 +1,4 @@
+import 'package:customer/routes/routeName.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 import '../../../res/mediaQuery.dart';
@@ -29,7 +30,9 @@ class _HeaderWidgetState extends State<HeaderWidget> {
           Row(
             children: [
               InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.pushNamed(context, RouteNames.profile);
+                },
                 child: Container(
                   // color: Colors.red,
                   width: SizeVariables.getWidth(context) * 0.8,

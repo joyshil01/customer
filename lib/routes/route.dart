@@ -1,4 +1,5 @@
 import 'package:customer/routes/routeName.dart';
+import 'package:customer/views/screen/profileScreen.dart';
 import 'package:flutter/material.dart';
 import '../res/components/bottomNavigationBar.dart';
 import '../views/screen/invoicedetails_Screen.dart';
@@ -58,6 +59,10 @@ class Routes {
       case RouteNames.settlement_details:
         return MaterialPageRoute(
             builder: (BuildContext context) => Settlementdetails_Screen());
+
+      case RouteNames.profile:
+        return MaterialPageRoute(
+            builder: (BuildContext context) => ProfileScreen());
 
       default:
         return MaterialPageRoute(
