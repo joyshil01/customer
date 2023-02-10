@@ -11,7 +11,6 @@ import '../widget/invoice_widget/dr_Widget.dart';
 class InvoiceScreen extends StatefulWidget {
   // const InvoiceScreen({Key? key}) : super(key: key);
   bool changeOnTap = false;
-
   @override
   State<InvoiceScreen> createState() => _InvoiceScreenState();
 }
@@ -493,8 +492,12 @@ class _InvoiceScreenState extends State<InvoiceScreen> {
                                                           .textTheme
                                                           .bodyText1!
                                                           .copyWith(
-                                                            color: Color.fromARGB(
-                                                                255, 63, 147, 84),
+                                                            color:
+                                                                Color.fromARGB(
+                                                                    255,
+                                                                    63,
+                                                                    147,
+                                                                    84),
                                                             fontSize: 12,
                                                           ),
                                                     ),

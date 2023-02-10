@@ -2,6 +2,8 @@ import 'package:customer/res/mediaQuery.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 import '../responsive.dart';
+import 'customerInformation.dart';
+import 'itemInformation.dart';
 
 class ItemDetailScreen extends StatefulWidget {
   @override
@@ -250,6 +252,15 @@ class _ItemDetailScreenState extends State<ItemDetailScreen> {
                     : height < 650
                         ? 72.h
                         : 69.1.h,
+                child: Column(
+                  children: [
+                    _selection == 0
+                        ? ItemInformation()
+                        : _selection == 1
+                            ? CustomerInformation()
+                            : Container(),
+                  ],
+                ),
               ),
             ),
           ],

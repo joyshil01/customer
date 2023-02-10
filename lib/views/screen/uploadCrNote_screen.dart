@@ -1,12 +1,10 @@
 import 'dart:io';
-
 import 'package:cool_alert/cool_alert.dart';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:image_picker/image_picker.dart';
-
 import '../../res/mediaQuery.dart';
 
 class UploadCrNote_Screen extends StatefulWidget {
@@ -108,7 +106,7 @@ class _UploadCrNote_ScreenState extends State<UploadCrNote_Screen>
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.secondary,
         title: Text(
-          "Upload Cr Note",
+          "Upload Cr & Dr Note",
           style: Theme.of(context).textTheme.bodyText2!.copyWith(
                 fontSize: 22,
                 color: Colors.white,
@@ -122,7 +120,7 @@ class _UploadCrNote_ScreenState extends State<UploadCrNote_Screen>
               height: 50,
             ),
             Text(
-              'Upload your Cr Note',
+              'Upload your Cr & Dr Note',
               style: Theme.of(context).textTheme.bodyText2!.copyWith(
                     fontSize: 22,
                   ),
