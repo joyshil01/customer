@@ -95,7 +95,7 @@ class _HeaderWidgetState extends State<HeaderWidget> {
                             FittedBox(
                               fit: BoxFit.contain,
                               child: Text(
-                                'GSTN01234567892',
+                                'GSTN0 27AAACI5950L1ZC',
                                 style: Theme.of(context)
                                     .textTheme
                                     .bodyText2!
