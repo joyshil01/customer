@@ -14,11 +14,13 @@ class _ItemInformationState extends State<ItemInformation> {
     final height = MediaQuery.of(context).size.height;
     final width = MediaQuery.of(context).size.width;
     return Container(
-      height: height > 750
+      height: height > 850
           ? 74.1.h
-          : height < 650
-              ? 75.h
-              : 73.2.h,
+          : height > 750
+              ? 73.1.h
+              : height < 650
+                  ? 75.h
+                  : 73.2.h,
       width: double.infinity,
       child: ListView.builder(
         itemCount: 10,

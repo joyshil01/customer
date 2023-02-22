@@ -17,11 +17,13 @@ class _AllItem_WidgetState extends State<AllItem_Widget> {
     final height = MediaQuery.of(context).size.height;
     final width = MediaQuery.of(context).size.width;
     return Container(
-      height: height > 750
+      height: height > 850
           ? 76.9.h
-          : height < 650
-              ? 75.h
-              : 72.h,
+          : height > 750
+              ? 76.5.h
+              : height < 650
+                  ? 75.h
+                  : 72.h,
       width: double.infinity,
       child: ListView.builder(
         itemCount: 20,
@@ -54,27 +56,33 @@ class _AllItem_WidgetState extends State<AllItem_Widget> {
                           Container(
                             child: Text(
                               'PO8981',
-                              style: Theme.of(context).textTheme.bodyText1!.copyWith(fontSize: 14),
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .bodyText1!
+                                  .copyWith(fontSize: 14),
                             ),
                           ),
                           Container(
                             child: Text(
                               '2023-01-29',
-                              style: Theme.of(context).textTheme.bodyText1!.copyWith(fontSize: 14),
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .bodyText1!
+                                  .copyWith(fontSize: 14),
                             ),
                           ),
                         ],
                       ),
                     ),
                     SizedBox(
-                      height: SizeVariables.getHeight(context)*0.01,
+                      height: SizeVariables.getHeight(context) * 0.01,
                     ),
                     Container(
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Container(
-                            width: SizeVariables.getWidth(context)*0.4,
+                            width: SizeVariables.getWidth(context) * 0.4,
                             child: Text(
                               'HAPPIEST MINDS TECHNOLOGIES LIMITED',
                               style: Theme.of(context).textTheme.bodyText1,
@@ -117,7 +125,8 @@ class _AllItem_WidgetState extends State<AllItem_Widget> {
                                 Container(
                                   child: Text(
                                     '5 jan 2023',
-                                    style: Theme.of(context).textTheme.bodyText1,
+                                    style:
+                                        Theme.of(context).textTheme.bodyText1,
                                   ),
                                 ),
                               ],

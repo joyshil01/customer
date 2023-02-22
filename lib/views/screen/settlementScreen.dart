@@ -66,11 +66,13 @@ class _SettlementScreenState extends State<SettlementScreen> {
                   color: Theme.of(context).scaffoldBackgroundColor,
                 ),
                 // height: SizeVariables.getHeight(context) * 0.8,
-                height: height > 750
+                height: height > 850
                     ? 81.8.h
-                    : height < 650
-                        ? 82.h
-                        : 78.2.h,
+                    : height > 750
+                        ? 81.5.h
+                        : height < 650
+                            ? 82.h
+                            : 78.2.h,
                 child: Column(
                   children: [
                     Padding(
@@ -178,11 +180,13 @@ class _SettlementScreenState extends State<SettlementScreen> {
                     ),
                     Container(
                       // color: Colors.amber,
-                      height: height > 750
+                      height: height > 850
                           ? 61.h
-                          : height < 650
-                              ? 55.h
-                              : 52.5.h,
+                          : height > 750
+                              ? 59.5.h
+                              : height < 650
+                                  ? 55.h
+                                  : 52.5.h,
                       child: ListView.builder(
                         itemCount: 18,
                         itemBuilder: (context, index) => Container(

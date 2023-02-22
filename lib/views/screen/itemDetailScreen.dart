@@ -247,11 +247,13 @@ class _ItemDetailScreenState extends State<ItemDetailScreen> {
                 decoration: BoxDecoration(
                   color: Theme.of(context).scaffoldBackgroundColor,
                 ),
-                height: height > 750
+                height: height > 850
                     ? 74.1.h
-                    : height < 650
-                        ? 72.h
-                        : 69.1.h,
+                    : height > 750
+                        ? 73.1.h
+                        : height < 650
+                            ? 72.h
+                            : 69.1.h,
                 child: Column(
                   children: [
                     _selection == 0

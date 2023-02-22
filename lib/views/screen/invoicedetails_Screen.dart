@@ -166,11 +166,13 @@ class _Invoicedetails_ScreenState extends State<Invoicedetails_Screen> {
               ),
               child: Container(
                 // height: SizeVariables.getHeight(context) * 0.756,
-                height: height > 750
+                height: height > 850
                     ? 79.5.h
-                    : height < 650
-                        ? 79.h
-                        : 75.7.h,
+                    : height > 750
+                        ? 78.88.h
+                        : height < 650
+                            ? 79.h
+                            : 75.7.h,
                 decoration: BoxDecoration(
                   color: Theme.of(context).scaffoldBackgroundColor,
                 ),

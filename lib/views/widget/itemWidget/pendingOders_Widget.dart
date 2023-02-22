@@ -17,11 +17,13 @@ class _Pendingoders_WidgetState extends State<Pendingoders_Widget> {
     final height = MediaQuery.of(context).size.height;
     final width = MediaQuery.of(context).size.width;
     return Container(
-      height: height > 750
+      height: height > 850
           ? 76.9.h
-          : height < 650
-              ? 75.h
-              : 72.h,
+          : height > 750
+              ? 76.5.h
+              : height < 650
+                  ? 75.h
+                  : 72.h,
       width: double.infinity,
       child: ListView.builder(
         itemCount: 20,

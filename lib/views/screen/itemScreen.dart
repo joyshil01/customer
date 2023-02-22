@@ -276,11 +276,13 @@ class _ItemScreenState extends State<ItemScreen> {
                   color: Theme.of(context).scaffoldBackgroundColor,
                 ),
                 // height: SizeVariables.getHeight(context) * 0.81,
-                height: height > 750
+                height: height > 850
                     ? 76.9.h
-                    : height < 650
-                        ? 75.h
-                        : 73.2.h,
+                    : height > 750
+                        ? 76.5.h
+                        : height < 650
+                            ? 75.h
+                            : 73.2.h,
                 child: Column(
                   children: [
                     _selection == 0

@@ -17,11 +17,13 @@ class _Dr_WidgetState extends State<Dr_Widget> {
     final height = MediaQuery.of(context).size.height;
     final width = MediaQuery.of(context).size.width;
     return Container(
-      height: height > 750
+      height: height > 850
           ? 67.h
-          : height < 650
-              ? 64.h
-              : 60.h,
+          : height > 750
+              ? 65.7.h
+              : height < 650
+                  ? 64.h
+                  : 60.h,
       width: 400,
       child: ListView.builder(
         itemCount: 10,

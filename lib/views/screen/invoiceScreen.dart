@@ -340,11 +340,13 @@ class _InvoiceScreenState extends State<InvoiceScreen> {
     return Container(
       // color: Colors.amber,
       // height: SizeVariables.getHeight(context) * 0.68,
-      height: height > 750
+      height: height > 850
           ? 67.h
-          : height < 650
-              ? 64.h
-              : 60.h,
+          : height > 750
+              ? 65.7.h
+              : height < 650
+                  ? 64.h
+                  : 60.h,
       child: Responsive(
         mobile: ListView.builder(
           // physics: const NeverScrollableScrollPhysics(),

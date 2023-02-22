@@ -40,11 +40,13 @@ class _LastItemState extends State<LastItem> {
               //   height: SizeVariables.getHeight(context) * 0.01,
               // ),
               Container(
-                height: height > 750
+                height: height > 850
                     ? 50.h
-                    : height < 650
-                        ? 65.h
-                        : 62.h,
+                    : height > 750
+                        ? 53.h
+                        : height < 650
+                            ? 65.h
+                            : 62.h,
                 child: ListView.builder(
                   physics: const NeverScrollableScrollPhysics(),
                   itemCount: 5,
