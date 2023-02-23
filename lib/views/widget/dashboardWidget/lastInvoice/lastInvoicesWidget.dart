@@ -44,16 +44,17 @@ class _LastInvoicesWidgetState extends State<LastInvoicesWidget> {
               //   height: SizeVariables.getHeight(context) * 0.01,
               // ),
               Container(
-                height: height > 850
-                    ? 54.h
-                    : height > 750
-                        ? 58.h
-                        : height < 650
-                            ? 71.h
-                            : 67.h,
+                // height: height > 850
+                //     ? 54.h
+                //     : height > 750
+                //         ? 58.h
+                //         : height < 650
+                //             ? 71.h
+                //             : 67.h,
                 child: ListView.builder(
                   physics: const NeverScrollableScrollPhysics(),
                   itemCount: 5,
+                  shrinkWrap: true,
                   itemBuilder: (context, index) => InkWell(
                     onTap: () {
                       Navigator.pushNamed(context, RouteNames.invoice_details);
